@@ -1,0 +1,258 @@
+@font-face {
+    font-family: Nunito;
+    src: url('font/Nunito-Bold.ttf');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Nunito;
+}
+
+html {
+    /* background-color: rgb(34, 82, 90); */
+    background: linear-gradient(90deg ,rgb(45, 110, 122), rgb(34, 82, 90));
+}
+
+.header {
+    width: 100%;
+    padding: 25px 0px;
+    background-color: white;
+    text-align: center;
+}
+
+.header > h1 {
+    margin: 0 auto;
+    width: fit-content;
+    font-size: 34px;
+    font-weight: bold;
+    padding-left: 12px;
+    
+}
+
+.header > small {
+    display: inline-block;
+    margin-left: 9px;
+    font-weight: bold;
+    font-size: 12px;
+    
+}
+
+.scoreboard {
+    margin: 0 auto;
+    width: 190px;
+    height: 80px;
+    border: 3px solid white;
+    border-radius: 6px;
+    margin-top: 20px;
+    position: relative;
+}
+
+.scoreboard-player {
+    background-color: red;
+    display: inline-block;
+    text-align: center;
+    width: 45px;
+    position: absolute;
+    font-weight: bold;
+    color: white;
+    padding: 3px;
+}
+
+#user {
+    top: 28px;
+    left: -27px;
+}
+
+#comp {
+    top: 28px;
+    right: -29px;
+}
+
+.scores {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+    margin-top: 22px;
+}
+
+.game-progress {
+    margin: 0 auto;
+    width: fit-content;
+    padding: 30px 0px;
+    font-size: 25px;
+    color: white;
+    font-weight: bold;
+}
+
+.button-selector {
+    margin: 0 auto;
+    width: fit-content;
+    position: relative;
+}
+
+img {
+    cursor: pointer;
+}
+
+#rock {
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    border: 4px solid white;
+    border-radius: 50%;
+    transition: transform 0.5s;
+    /* transition: background-color 1s ease, box-shadow 1s ease; */
+}
+
+#rock:hover {
+    /* background-color: rgba(58, 19, 4, 0.767); */
+    /* box-shadow: 2px 0px 8px 6px rgba(58, 19, 4, 0.767); */
+    transform: scale(1.2, 1.2);
+    
+}
+#hand {
+    
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    border: 4px solid white;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+#hand:hover {
+    transform: scale(1.2, 1.2);
+    
+}
+
+#scissors {
+    display: inline-block;
+    padding: 20px;
+    margin: 20px;
+    border: 4px solid white;
+    border-radius: 50%;
+    transition: transform 0.5s;
+}
+
+#scissors:hover {
+    transform: scale(1.2, 1.2);
+}
+
+.move-status {
+    margin: 0 auto;
+    width: fit-content;
+    padding: 30px 0px;
+    font-size: 20px;
+    color: white;
+    font-weight: bold;
+}
+
+/** landing page **/
+.clogo {
+    margin: 0 auto;
+    width: fit-content;
+    height: fit-content;
+    display: block;
+    padding-top: 90px;
+}
+
+.clogo-body{
+    background-color: red;
+    background: linear-gradient(180deg ,rgb(45, 105, 116), rgb(40, 90, 100));
+    color: white;
+}
+
+.clogo > img {
+    width: 190px;
+    height: 190px;
+}
+
+.clogo-title {
+    padding: 0px;
+    font-size: 50px;
+    text-align: center;
+}
+
+.clogo-title > h6 {
+    font-size: 20px;
+    padding: 0px;
+    margin-bottom: 30px;
+    margin: 0 auto;
+}
+
+.footer {
+    display: block;
+    padding-top: 50px;
+    padding-bottom: 300px;
+    margin: 0 auto;
+    border-radius: 50%;
+    color: white;
+}
+
+.footer > a {
+    text-decoration: none;
+}
+
+a > h4 {
+    border: 3px solid white;
+    border-radius: 6px;
+    background-color: white;
+    color: rgb(45, 105, 116);
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: color 0.5s, background-color 1s, transform 1s;
+}
+
+a > h4:hover {
+    transform: scale(1.1, 1.1);
+    color: rgba(58, 19, 4, 0.911);
+    background-color: rgb(45, 105, 116);
+}
+
+/** media queries **/
+@media screen and (max-width: 420px) { /* if smaller than 420px */
+
+    .clogo > img {
+        margin-top: 2px;
+    }
+    /* on mobile remove button & tile img animations: animation issues fix needed */
+    #scissors {
+        display: inline-block;
+        padding: 20px;
+        margin: 20px;
+        border: 4px solid white;
+        border-radius: 50%;
+    }
+
+    #hand {
+        display: inline-block;
+        padding: 20px;
+        margin: 20px;
+        border: 4px solid white;
+        border-radius: 50%;
+    }
+
+    #rock {
+        display: inline-block;
+        padding: 20px;
+        margin: 20px;
+        border: 4px solid white;
+        border-radius: 50%;
+        /* transition: transform 0.5s; */
+        /* transition: background-color 1s ease, box-shadow 1s ease; */
+    }
+
+    a > h4 {
+        color: red; 
+        border: 3px solid white;
+        border-radius: 6px;
+        background-color: white;
+        padding: 10px 20px;
+        cursor: pointer;
+        /* transition: color 0.5s, background-color 1s, transform 1s; */
+    }
+    
+    
+
+}
